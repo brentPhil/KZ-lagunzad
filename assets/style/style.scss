@@ -1,15 +1,14 @@
-$ctype: (
-  "primary": #333745,
-  "secondary": #F2FFF7,
-  "text1": #A5A5A5,
-  "accent": #EA2E49,
-  "bg2": #F6F792,
+$primary : #333745;
+$secondary: #F2FFF7;
+$text1: #A5A5A5;
+$accent: #EA2E49;
+$bg2: #F6F792;
 
-);
+@import '_nav.scss';
 
 body{
     margin: 0;
-    color: map-get($ctype , primary );
+    color: $primary;
     font-family: 'Gowun Batang', serif;
     h1, h2{
         margin: 0;
@@ -20,65 +19,16 @@ body{
     position: fixed;
     width: 90%;
     padding: 0 5%;
-    z-index: 5;
+    z-index: 2;
 }
 .hcon{
-    position: relative; 
+    height: 50px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
-.nav{
-    display: none;
-    ul{
-        width: 250px;
-        display: flex;
-        justify-content: space-between;
-        li{
-            position: relative;
-            top: -7px;
-            list-style: none;
-            font-weight: bold;
-            border-bottom: 2px solid map-get($ctype , accent );
-            svg{
-                position: relative;
-                top: 2px;
-            }
-        }
-    }
-}
-.logo{
-    height: 50px;
-    z-index: 5;
-    display: grid;
     align-content: center;
-    h2{
-        margin: 0;
-        letter-spacing: .1em;
-    }
 }
-.connect{
-    display: none;
-    position: absolute;
-    border: 1px solid map-get($ctype , accent );
-    right: 0;
-    ul{
-        position: relative;
-        width: auto;
-        left: -1.3em;
-        display: grid;
-        grid-gap: .8em;
-        li{
-            border: none;
-            display: flex;
-            span{
-                display: grid;
-                align-content: center;
-                margin: 0 .5em;
-            }
-        }
-    }
-}
+
 // ----------------------hero
 .title{
     text-align: center;
@@ -96,7 +46,7 @@ body{
         }
     h4{
         margin: 1.5em 0 .5em 0;
-        color: map-get($ctype , accent );
+        color: $accent;
     }
 }
 
@@ -111,7 +61,7 @@ body{
     position: relative;
 }
 .prime{
-    background-color: map-get($ctype , primary );
+    background-color: $primary;
     font-family: 'Gowun Batang', serif;
     font-weight: bolder;
     font-size: 1rem;
@@ -119,16 +69,16 @@ body{
     padding: .5em 0;
     width: 130px;
     margin: 1.5em 0;
-    color: map-get($ctype , secondary );
+    color: $secondary;
 }
 
 .prime:hover{
-    color: map-get($ctype , accent);
+    color: $accent;
 }
 .conb{
     background: none;
-    border: 1px solid map-get($ctype , accent );
-    color: map-get($ctype , primary );
+    border: 1px solid $accent;
+    color: $primary;
 }
 .hero{
     position: absolute;
@@ -142,7 +92,7 @@ body{
 }
 
 .about_content{
-    background-color: map-get($ctype , secondary );
+    background-color: $secondary;
 }
 .profile{
     position: relative;
@@ -161,7 +111,7 @@ body{
     position: absolute;
     width: 99.5%;
     height: 98.5%;
-    border: 3px solid map-get($ctype , accent );
+    border: 3px solid $accent;
     top: 3px;
     left: 3px;
 }
@@ -170,7 +120,7 @@ body{
     margin: 0 auto;
     height: 0;
     width: 40px;
-    border: 1px solid map-get($ctype , accent );
+    border: 1px solid $accent;
 }
 .abouttext{
     width: 85%;
@@ -182,14 +132,14 @@ body{
 // ----------------------------services
 
 .service{
-    background-color: map-get($ctype , bg2 );
+    background-color: $bg2;
     h5{
         font-size: 1rem;
     }
 }
 .serve{
     span h1{
-    color: map-get($ctype , primary );
+    color: $primary;
     }
 }
 .services{
@@ -218,12 +168,12 @@ body{
 .testcontainer{
     width: 100%;
     height: 100vh;
-    background-color: map-get($ctype , primary );
+    background-color: $primary;
 }
 .ht{
     text-align: center;
     h1{
-         color: map-get($ctype , secondary );
+         color: $secondary;
     }
 }
 .testcon{
@@ -246,7 +196,7 @@ body{
 .border{
     width: 100%;
     height: 98%;
-    border: 2px solid map-get($ctype , accent );
+    border: 2px solid $accent;
     position: absolute;
     top: 3px;
     left: 3px;
@@ -257,12 +207,12 @@ body{
     display: flex;
     margin: 0 auto;
     width: 300px;
-    color: map-get($ctype , secondary );
+    color: $secondary;
     h3, h2, h5{
         margin: 0;
     }
     h5{
-        color: map-get($ctype , text1 );
+        color: $text1;
         margin-bottom: .5em;
     }
     h3{
@@ -286,7 +236,7 @@ body{
 }
 .dot:hover{
     svg{
-        fill: map-get($ctype , secondary );
+        fill: $secondary;
     }
 }
 // .indecator{
@@ -296,7 +246,7 @@ body{
 // .dot{
 //     height: 0;
 //     width: 30px;
-//     border: 1px solid map-get($ctype , accent );
+//     border: 1px solid $accent;
 //     margin: 0 .3em;
 // }
 
@@ -326,7 +276,7 @@ body{
 }
 .prevti{
     padding: 1.5em;
-    background-color: map-get($ctype , secondary );
+    background-color: $secondary;
     h4{
         margin: 0;
         font-weight: bold;
@@ -343,7 +293,7 @@ body{
     display: grid;
     align-content: center;
     height: 100vh;
-    background-color: map-get($ctype , bg2 );
+    background-color: $bg2;
     position: relative;
 }
 .coninfo{
@@ -369,7 +319,7 @@ body{
     margin: 0 5%;
     display: flex;
     justify-content: space-between;
-    border-top: 2px solid map-get($ctype , accent );
+    border-top: 2px solid $accent;
     position: absolute;
     bottom: 10px;
     h6{
