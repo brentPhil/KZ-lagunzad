@@ -39,6 +39,8 @@ var btn = $('.btn');
 btn.on('click', function() {
   $(this).toggleClass('open');
   $(this).toggleClass('not-open');
+  $('.logo').toggleClass('lc');
+  $('.logo').toggleClass('lc1');
 }); 
 
 var menua = $('.menu-nav a');
@@ -46,11 +48,34 @@ var menua = $('.menu-nav a');
 menua.on('click', function() {
     $('.btn').toggleClass('open');
   $('.btn').toggleClass('not-open');
+    $('.logo').toggleClass('lc');
+    $('.logo').toggleClass('lc1');
 }); 
 
+$(document).on('scroll', function(){
+    if ( $(window).scrollTop() > 2300) {
+        $('.btn').addClass('color');
+    } else {
+        $('.btn').removeClass('color');
+    }
+    if ($(window).scrollTop() > 3050){
+        $('.btn').removeClass('color');
+    }
+});
 
-// const next = document.querySelector(".buttonleft");
-// const prev = document.querySelector(".buttonright");
+$(document).on('scroll', function(){
+    if ( $(window).scrollTop() > 2300) {
+        $('.logo').addClass('lc1');
+    } else {
+        $('.logo').removeClass('lc1');
+    }
+    if ($(window).scrollTop() > 3050){
+        $('.logo').removeClass('lc1');
+    }
+});
+
+const next = document.querySelector(".left");
+const prev = document.querySelector(".right");
 
 var owl = $('.owl-carousel');
 owl.owlCarousel({
@@ -58,15 +83,10 @@ owl.owlCarousel({
     loop:true,
     margin:10,
     autoplay:true,
-    nav:false,
-    // dots:false,
-    // navText:[
-    //   next,prev
-    // ],
+    nav: true,
+    navText:[
+      next,prev
+    ],
     autoplayTimeout:5000,
     autoplayHoverPause:true
-});
-
-$('.testnav').on('click', '.dot', function(e) {
-  owl.trigger('to.owl.carousel', [jQuery(this).index(), 200]);
 });

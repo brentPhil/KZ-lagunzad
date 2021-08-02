@@ -1,10 +1,14 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap");
 .logo {
   z-index: 5;
   display: -ms-grid;
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
 }
 
 .logo h2 {
@@ -89,7 +93,27 @@
   position: relative;
   -webkit-transition: all .3s;
   transition: all .3s;
+  background-color: #333745;
+}
+
+.menu-btn:hover .btn div {
   background-color: #EA2E49;
+}
+
+.open div {
+  background-color: #F2FFF7;
+}
+
+.color div {
+  background-color: #F2FFF7;
+}
+
+.lc h2 {
+  color: #333745;
+}
+
+.lc1 h2 {
+  color: #F2FFF7;
 }
 
 .open div:nth-child(1) {
@@ -398,8 +422,7 @@
 
 .menu-nav a {
   text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Courgette', cursive;
+  font-family: 'Lobster', cursive;
   color: #F2FFF7;
   font-size: 1.5rem;
   -webkit-transition: .2s ease-in;
@@ -455,6 +478,18 @@
           transition-delay: .6s;
 }
 
+.owl-next {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+}
+
+.owl-next img {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   color: #333745;
@@ -468,6 +503,7 @@ body h1, body h2 {
 .header {
   position: fixed;
   width: 90%;
+  max-width: 1245px;
   padding: 0 5%;
   z-index: 2;
 }
@@ -490,21 +526,22 @@ body h1, body h2 {
 }
 
 .title p {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
+  position: relative;
   margin: 0;
 }
 
-.title h1 {
+.title b {
   margin: .2em 0;
-  font-size: 3.5rem;
+  font-size: 4rem;
   line-height: .5em;
-  font-family: 'Courgette', cursive;
   letter-spacing: .1EM;
+  font-family: 'Lobster', cursive;
 }
 
 .title h4 {
-  margin: 1.5em 0 .5em 0;
+  margin: 2em 0 .5em 0;
   color: #EA2E49;
 }
 
@@ -527,7 +564,7 @@ body h1, body h2 {
   font-weight: bolder;
   font-size: 1rem;
   border: none;
-  padding: .5em 0;
+  padding: .3em 0;
   width: 130px;
   margin: 1.5em 0;
   color: #F2FFF7;
@@ -550,8 +587,12 @@ body h1, body h2 {
   display: none;
 }
 
+.body_content h1 {
+  font-family: 'El Messiri', sans-serif;
+}
+
 .about_content, .service, .testcontainer {
-  padding: 10vh 0;
+  padding: 5em 0;
 }
 
 .about_content {
@@ -562,24 +603,28 @@ body h1, body h2 {
   position: relative;
   margin: 0 auto;
   margin-bottom: 2em;
-  width: 240px;
+  width: 200px;
+  height: 300px;
 }
 
 .profile img {
   width: 100%;
+  height: 100%;
   position: relative;
   z-index: 1;
-  top: -3px;
-  left: -3px;
+  top: -.3em;
+  left: -.3em;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .imgborder {
   position: absolute;
-  width: 99.5%;
-  height: 98.5%;
-  border: 3px solid #EA2E49;
-  top: 3px;
-  left: 3px;
+  width: 100%;
+  height: 100%;
+  border: 0.2em solid #EA2E49;
+  top: .3em;
+  left: .3em;
 }
 
 .line {
@@ -610,7 +655,9 @@ body h1, body h2 {
 
 .services {
   margin: 0 auto;
+  padding: 2em 0;
   width: 90%;
+  max-width: 700px;
 }
 
 .services span {
@@ -637,7 +684,6 @@ body h1, body h2 {
 
 .testcontainer {
   width: 100%;
-  height: 100vh;
   background-color: #333745;
 }
 
@@ -659,11 +705,13 @@ body h1, body h2 {
 .tprofile {
   position: relative;
   width: 200px;
+  height: 200px;
   margin: 0 auto;
 }
 
 .tprofile img {
   width: 100%;
+  height: 100%;
   position: relative;
   top: -3px;
   left: -3px;
@@ -671,7 +719,7 @@ body h1, body h2 {
 
 .border {
   width: 100%;
-  height: 98%;
+  height: 100%;
   border: 2px solid #EA2E49;
   position: absolute;
   top: 3px;
@@ -684,7 +732,7 @@ body h1, body h2 {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  width: 300px;
+  width: 70%;
   color: #F2FFF7;
 }
 
@@ -699,6 +747,7 @@ body h1, body h2 {
 
 .tquote h3 {
   margin-top: 1em;
+  font-size: 1rem;
 }
 
 .tquote span {
@@ -712,7 +761,6 @@ body h1, body h2 {
 .testnav {
   width: 100%;
   margin: 0 auto;
-  position: relative;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -739,7 +787,7 @@ body h1, body h2 {
 .precon {
   margin: 0 auto;
   margin-top: 4em;
-  max-width: 500px;
+  max-width: 400px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
@@ -755,13 +803,15 @@ body h1, body h2 {
 }
 
 .prevti {
+  position: relative;
+  z-index: 1;
   padding: 1.5em;
   background-color: #F2FFF7;
 }
 
 .prevti h4 {
   margin: 0;
-  font-weight: bold;
+  font-size: .7rem;
   text-transform: uppercase;
 }
 
@@ -823,6 +873,9 @@ body h1, body h2 {
 }
 
 @media only screen and (min-width: 600px) {
+  html {
+    font-size: 20px;
+  }
   .testcontainer {
     height: 80vh;
   }
@@ -830,15 +883,102 @@ body h1, body h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 600px;
+    height: 300px;
+    margin: 0 auto;
   }
-  .border {
-    height: 90%;
+  .tprofile {
+    width: 200px;
+    height: 200px;
+  }
+  .tprofile img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .profile {
+    width: 270px;
+    height: 385px;
+  }
+  .abouttext {
+    margin-top: 4em;
+    text-align: left;
+  }
+  .abouttext div {
+    margin: 0;
+  }
+  .tquote {
+    padding: 0;
+    margin-left: 2em;
   }
   .owl-carousel {
     padding: 3em 0;
   }
   .precon {
     width: 400px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .prev {
+    padding: 3em;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .testcontainer {
+    max-height: 600px;
+  }
+  .tall img {
+    height: 360px;
+  }
+  .fprev {
+    width: 46%;
+  }
+  .precon {
+    width: 100%;
+    margin-top: 2em;
+  }
+  .preimg {
+    height: 360px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .body {
+    margin: 0 auto;
+    max-width: 1500px;
+  }
+  .aboutflex {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+  }
+  .profile {
+    margin-right: 5em;
+    width: 420px;
+    height: 500px;
+  }
+  .fprev {
+    width: 50%;
+  }
+  .abouttext {
+    margin: 0;
+    text-align: left;
+  }
+  .abouttext div {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .fprev {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=style.css.map */
